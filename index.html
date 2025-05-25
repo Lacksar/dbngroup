@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DBN GROUP PVT LTD - Expert Web Development</title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="DBN GROUP PVT LTD offers expert web development services, crafting high-performance, responsive websites and applications to elevate your business."
+    />
+    <meta
+      name="keywords"
+      content="web development, web design, javascript, react, nodejs, full-stack, frontend, backend, responsive design, DBN GROUP PVT LTD"
+    />
+    <meta name="author" content="DBN GROUP PVT LTD" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.com/" />
+    <!-- Replace with your actual domain -->
+    <meta
+      property="og:title"
+      content="DBN GROUP PVT LTD - Expert Web Development"
+    />
+    <meta
+      property="og:description"
+      content="Crafting high-performance, responsive websites and applications."
+    />
+    <meta property="og:image" content="https://yourdomain.com/og-image.jpg" />
+    <!-- Create and upload an OG image -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://yourdomain.com/" />
+    <!-- Replace with your actual domain -->
+    <meta
+      property="twitter:title"
+      content="DBN GROUP PVT LTD - Expert Web Development"
+    />
+    <meta
+      property="twitter:description"
+      content="Crafting high-performance, responsive websites and applications."
+    />
+    <meta
+      property="twitter:image"
+      content="https://yourdomain.com/twitter-image.jpg"
+    />
+    <!-- Create and upload a Twitter image -->
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Favicon (replace with your actual favicon) -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <style>
+      /* Custom Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-custom-fadeInUp {
+        /* Renamed to avoid conflict if Tailwind adds its own */
+        animation: fadeInUp 0.6s ease-out forwards;
+      }
+
+      .fade-in-on-scroll {
+        /* Renamed for clarity from generic fade-in-up */
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      .fade-in-on-scroll.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .nav-link-active {
+        color: #2563eb; /* Tailwind's blue-600 */
+        font-weight: 600;
+        position: relative;
+      }
+      .nav-link-active::after {
+        /* Subtle underline for active link */
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #2563eb; /* Tailwind's blue-600 */
+      }
+
+      #mobile-menu {
+        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        opacity: 0;
+      }
+      #mobile-menu.open {
+        max-height: 500px; /* Adjust if menu is taller */
+        opacity: 1;
+      }
+      /* Hero background image - optional subtle texture */
+      /*
+        #hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('https://www.transparenttextures.com/patterns/soft-wallpaper.png');
+            opacity: 0.05;
+            z-index: 0;
+        }
+        #hero > div {
+            position: relative;
+            z-index: 1;
+        }
+        */
+    </style>
+  </head>
+  <body class="bg-gray-100 text-gray-800 font-sans antialiased">
+    <div
+      class="w-full min-h-10 fixed bg-blue-600 z-50 top-0 flex justify-end items-center px-6 py-2 space-x-6 text-white text-sm"
+    >
+      <div class="flex items-center space-x-2">
+        <i class="fa fa-envelope"></i>
+        <a href="mailto:info@dbngroup.com" class="hover:underline"
+          >info@dbngroup.com</a
+        >
+      </div>
+      <div class="flex items-center space-x-2">
+        <i class="fa fa-phone"></i>
+        <a href="tel:+9779817824644" class="hover:underline"
+          >+977 981-7824644</a
+        >
+      </div>
+    </div>
+
+    <nav
+      class="bg-white backdrop-blur-md shadow-md fixed w-full z-50 top-10 transition-all duration-300"
+    >
+      <div
+        class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center"
+      >
+        <div class="flex justify-between items-center">
+          <img src="images/logo.png " class="w-10" alt="logo" />
+          <a
+            href="#hero"
+            class="text-2xl ml-4 font-bold text-gray-600 hover:text-blue-700 transition-colors"
+            >DBN GROUP PVT LTD</a
+          >
+        </div>
+        <div class="hidden md:flex space-x-8">
+          <a
+            href="#hero"
+            class="nav-link text-gray-600 hover:text-blue-600 transition-colors"
+            >Home</a
+          >
+          <a
+            href="#services"
+            class="nav-link text-gray-600 hover:text-blue-600 transition-colors"
+            >Services</a
+          >
+          <a
+            href="#portfolio"
+            class="nav-link text-gray-600 hover:text-blue-600 transition-colors"
+            >Portfolio</a
+          >
+          <a
+            href="#about"
+            class="nav-link text-gray-600 hover:text-blue-600 transition-colors"
+            >About</a
+          >
+          <a
+            href="#testimonials"
+            class="nav-link text-gray-600 hover:text-blue-600 transition-colors"
+            >Testimonials</a
+          >
+          <a
+            href="#contact"
+            class="nav-link text-gray-600 hover:text-blue-600 transition-colors"
+            >Contact</a
+          >
+        </div>
+        <div class="md:hidden">
+          <button
+            id="mobile-menu-button"
+            class="text-gray-700 focus:outline-none"
+          >
+            <i class="fas fa-bars fa-lg"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="md:hidden bg-white shadow-lg max-h-0 overflow-hidden"
+      >
+        <a
+          href="#hero"
+          class="block py-3 px-6 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors mobile-nav-link"
+          >Home</a
+        >
+        <a
+          href="#services"
+          class="block py-3 px-6 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors mobile-nav-link"
+          >Services</a
+        >
+        <a
+          href="#portfolio"
+          class="block py-3 px-6 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors mobile-nav-link"
+          >Portfolio</a
+        >
+        <a
+          href="#about"
+          class="block py-3 px-6 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors mobile-nav-link"
+          >About</a
+        >
+        <a
+          href="#testimonials"
+          class="block py-3 px-6 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors mobile-nav-link"
+          >Testimonials</a
+        >
+        <a
+          href="#contact"
+          class="block py-3 px-6 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors mobile-nav-link"
+          >Contact</a
+        >
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      style="
+        background-image: url('images/hero-bg.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      "
+      class="relative min-h-screen flex items-center justify-center text-white pt-20 overflow-hidden"
+    >
+      <!-- 🔧 Dark overlay -->
+      <div class="absolute inset-0 bg-black/60 z-0"></div>
+
+      <!-- 🎨 Pattern overlay (optional, subtle design) -->
+      <div class="absolute inset-0 opacity-10 z-0">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern
+              id="heroPattern"
+              patternUnits="userSpaceOnUse"
+              width="50"
+              height="50"
+              patternTransform="scale(1) rotate(0)"
+            >
+              <rect
+                x="0"
+                y="0"
+                width="100%"
+                height="100%"
+                fill="hsla(0,0%,100%,0)"
+              />
+              <path
+                d="M25 0L50 25L25 50L0 25Z"
+                stroke-width="0.5"
+                stroke="hsla(227, 60%, 50%, 1)"
+                fill="hsla(227, 60%, 50%, 0.2)"
+              />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#heroPattern)" />
+        </svg>
+      </div>
+
+      <!-- 🔵 Hero content -->
+      <div class="container mx-auto px-6 text-center relative z-10">
+        <h1
+          class="text-5xl md:text-7xl font-bold mb-4 animate-custom-fadeInUp"
+          style="animation-delay: 0.2s"
+        >
+          DBN GROUP PVT LTD
+        </h1>
+        <p
+          class="text-xl md:text-2xl mb-8 animate-custom-fadeInUp"
+          style="animation-delay: 0.4s"
+        >
+          Digitalize Your Business With Us
+        </p>
+
+        <a
+          href="tel:+977981-7824644"
+          class="bg-blue-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-blue-900 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 animate-custom-fadeInUp"
+          style="animation-delay: 0.8s"
+        >
+          <i class="fa fa-phone"></i> Contact Us
+        </a>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 lg:py-28 bg-white">
+      <div class="container mx-auto px-4 sm:px-6">
+        <h2
+          class="text-4xl lg:text-5xl font-bold text-center mb-16 lg:mb-20 text-gray-800 animate-on-scroll fade-in-on-scroll"
+        >
+          Our Expertise
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+          <!-- Service Item -->
+          <div
+            class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll fade-in-on-scroll transform hover:-translate-y-1"
+          >
+            <div class="text-blue-500 mb-5 text-4xl">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3 class="text-2xl font-semibold mb-3 text-gray-700">
+              Custom Web Development
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Tailored web applications built from scratch to meet unique
+              business needs. Scalable, performant, and robust.
+            </p>
+          </div>
+          <div
+            class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll fade-in-on-scroll transform hover:-translate-y-1"
+            style="transition-delay: 0.1s"
+          >
+            <div class="text-blue-500 mb-5 text-4xl">
+              <i class="fas fa-palette"></i>
+            </div>
+            <h3 class="text-2xl font-semibold mb-3 text-gray-700">
+              UI/UX Design
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Intuitive, engaging user interfaces designed with a user-centric
+              approach for seamless navigation and delight.
+            </p>
+          </div>
+          <div
+            class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll fade-in-on-scroll transform hover:-translate-y-1"
+            style="transition-delay: 0.2s"
+          >
+            <div class="text-blue-500 mb-5 text-4xl">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3 class="text-2xl font-semibold mb-3 text-gray-700">
+              Responsive & Mobile-First
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Websites that look and perform beautifully on all devices,
+              adapting to any screen size with a mobile-first philosophy.
+            </p>
+          </div>
+          <div
+            class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll fade-in-on-scroll transform hover:-translate-y-1"
+            style="transition-delay: 0.3s"
+          >
+            <div class="text-blue-500 mb-5 text-4xl">
+              <i class="fas fa-cart-shopping"></i>
+            </div>
+            <h3 class="text-2xl font-semibold mb-3 text-gray-700">
+              E-commerce Solutions
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Powerful online stores with secure payments, inventory management,
+              and a smooth shopping experience to boost sales.
+            </p>
+          </div>
+          <div
+            class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll fade-in-on-scroll transform hover:-translate-y-1"
+            style="transition-delay: 0.4s"
+          >
+            <div class="text-blue-500 mb-5 text-4xl">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h3 class="text-2xl font-semibold mb-3 text-gray-700">
+              Performance & SEO
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Optimizing for speed, efficiency, and search engine visibility to
+              ensure fast load times and better rankings.
+            </p>
+          </div>
+          <div
+            class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll fade-in-on-scroll transform hover:-translate-y-1"
+            style="transition-delay: 0.5s"
+          >
+            <div class="text-blue-500 mb-5 text-4xl">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <h3 class="text-2xl font-semibold mb-3 text-gray-700">
+              CMS & API Integrations
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Custom CMS development or integration with platforms like
+              WordPress, plus robust API integrations.
+            </p>
+          </div>
+        </div>
+        <div class="mt-20 text-center animate-on-scroll fade-in-on-scroll">
+          <h3 class="text-3xl font-bold mb-8 text-gray-800">
+            Our Technology Arsenal
+          </h3>
+          <div
+            class="flex flex-wrap justify-center items-center gap-x-4 gap-y-3 sm:gap-x-6 sm:gap-y-4"
+          >
+            <span
+              class="bg-blue-100 text-blue-700 px-5 py-2 rounded-full text-sm font-semibold shadow-sm"
+              >HTML5</span
+            >
+            <span
+              class="bg-indigo-100 text-indigo-700 px-5 py-2 rounded-full text-sm font-semibold shadow-sm"
+              >CSS3 & SASS</span
+            >
+            <span
+              class="bg-yellow-100 text-yellow-700 px-5 py-2 rounded-full text-sm font-semibold shadow-sm"
+              >JavaScript (ESNext)</span
+            >
+            <span
+              class="bg-sky-100 text-sky-700 px-5 py-2 rounded-full text-sm font-semibold shadow-sm"
+              >React & Next.js</span
+            >
+            <span
+              class="bg-green-100 text-green-700 px-5 py-2 rounded-full text-sm font-semibold shadow-sm"
+              >Node.js & Express</span
+            >
+            <span
+              class="bg-teal-100 text-teal-700 px-5 py-2 rounded-full text-sm font-semibold shadow-sm"
+              >Tailwind CSS</span
+            >
+
+            <span
+              class="bg-red-100 text-red-700 px-5 py-2 rounded-full text-sm font-semibold shadow-sm"
+              >Databases (SQL/NoSQL)</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 lg:py-28 bg-gray-100">
+      <div class="container mx-auto px-4 sm:px-6">
+        <h2
+          class="text-4xl lg:text-5xl font-bold text-center mb-16 lg:mb-20 text-gray-800 animate-on-scroll fade-in-on-scroll"
+        >
+          Featured Projects
+        </h2>
+        <div class="grid md:grid-cols-2 gap-10 lg:gap-12">
+          <!-- Project 1 -->
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll fade-in-on-scroll transition-all duration-300 ease-out hover:shadow-2xl hover:-translate-y-2 group"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://th.bing.com/th/id/OIP.LTFw1W1dcNFDsfwG7BtjfwHaEK?rs=1&pid=ImgDetMain"
+                alt="E-commerce Platform Screenshot"
+                class="w-full h-72 object-cover transform group-hover:scale-105 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-opacity duration-300"
+              ></div>
+            </div>
+            <div class="p-6 md:p-8">
+              <h3 class="text-2xl font-semibold mb-2 text-gray-700">
+                AlphaCommerce Suite
+              </h3>
+              <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                A full-featured e-commerce platform with advanced filtering,
+                secure checkout, and an intuitive admin dashboard for global
+                sales.
+              </p>
+              <p class="text-xs text-gray-500 mb-4">
+                <strong>Tech:</strong> React, Node.js, MongoDB, Stripe API,
+                Tailwind CSS
+              </p>
+              <a
+                href="#"
+                target="_blank"
+                class="inline-block bg-blue-600 text-white px-6 py-2.5 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium shadow-md hover:shadow-lg"
+                >View Live Demo</a
+              >
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll fade-in-on-scroll transition-all duration-300 ease-out hover:shadow-2xl hover:-translate-y-2 group"
+            style="transition-delay: 0.1s"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="SaaS Dashboard Screenshot"
+                class="w-full h-72 object-cover transform group-hover:scale-105 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-opacity duration-300"
+              ></div>
+            </div>
+            <div class="p-6 md:p-8">
+              <h3 class="text-2xl font-semibold mb-2 text-gray-700">
+                Insight SaaS Dashboard
+              </h3>
+              <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                An intuitive analytics dashboard for a SaaS product, providing
+                data visualization, user management, and reporting.
+              </p>
+              <p class="text-xs text-gray-500 mb-4">
+                <strong>Tech:</strong> Next.js, Firebase, Chart.js, Tailwind CSS
+              </p>
+              <a
+                href="#"
+                target="_blank"
+                class="inline-block bg-green-500 text-white px-6 py-2.5 rounded-md hover:bg-green-600 transition-colors text-sm font-medium shadow-md hover:shadow-lg"
+                >View Case Study</a
+              >
+            </div>
+          </div>
+          <!-- Project 3 -->
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll fade-in-on-scroll transition-all duration-300 ease-out hover:shadow-2xl hover:-translate-y-2 group"
+            style="transition-delay: 0.2s"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Creative Agency Portfolio Screenshot"
+                class="w-full h-72 object-cover transform group-hover:scale-105 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-opacity duration-300"
+              ></div>
+            </div>
+            <div class="p-6 md:p-8">
+              <h3 class="text-2xl font-semibold mb-2 text-gray-700">
+                Momentum Creative Hub
+              </h3>
+              <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                A visually stunning portfolio website for a creative agency,
+                showcasing their work with smooth animations and storytelling.
+              </p>
+              <p class="text-xs text-gray-500 mb-4">
+                <strong>Tech:</strong> GSAP, WebGL, Contentful, Vanilla JS
+              </p>
+              <a
+                href="#"
+                target="_blank"
+                class="inline-block bg-purple-500 text-white px-6 py-2.5 rounded-md hover:bg-purple-600 transition-colors text-sm font-medium shadow-md hover:shadow-lg"
+                >Explore Site</a
+              >
+            </div>
+          </div>
+          <!-- Project 4 -->
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll fade-in-on-scroll transition-all duration-300 ease-out hover:shadow-2xl hover:-translate-y-2 group"
+            style="transition-delay: 0.3s"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Mobile App Landing Page Screenshot"
+                class="w-full h-72 object-cover transform group-hover:scale-105 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-opacity duration-300"
+              ></div>
+            </div>
+            <div class="p-6 md:p-8">
+              <h3 class="text-2xl font-semibold mb-2 text-gray-700">
+                ConnectApp Landing
+              </h3>
+              <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                A conversion-focused landing page for a new mobile application,
+                designed to maximize downloads and user acquisition.
+              </p>
+              <p class="text-xs text-gray-500 mb-4">
+                <strong>Tech:</strong> HTML5, Tailwind CSS, Alpine.js, Mailchimp
+              </p>
+              <a
+                href="#"
+                target="_blank"
+                class="inline-block bg-yellow-500 text-white px-6 py-2.5 rounded-md hover:bg-yellow-600 transition-colors text-sm font-medium shadow-md hover:shadow-lg"
+                >See Details</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 lg:py-28 bg-white">
+      <div class="container mx-auto px-4 sm:px-6">
+        <h2
+          class="text-4xl lg:text-5xl font-bold text-center mb-16 lg:mb-20 text-gray-800 animate-on-scroll fade-in-on-scroll"
+        >
+          Who We Are
+        </h2>
+        <div class="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <div
+            class="animate-on-scroll fade-in-on-scroll rounded-xl overflow-hidden shadow-xl"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="DBN GROUP PVT LTD Team Collaborating"
+              class="w-full h-auto object-cover"
+            />
+          </div>
+          <div
+            class="animate-on-scroll fade-in-on-scroll"
+            style="transition-delay: 0.1s"
+          >
+            <h3 class="text-3xl font-semibold mb-6 text-gray-700">
+              Our Journey & Philosophy
+            </h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Founded with a passion for innovation and problem-solving, DBN
+              GROUP PVT LTD is dedicated to empowering businesses through
+              cutting-edge web technology. We believe in collaborative
+              partnerships, transparent processes, and delivering solutions that
+              not only meet but exceed expectations.
+            </p>
+            <h3 class="text-2xl font-semibold mb-4 text-gray-700">
+              Core Values That Drive Us
+            </h3>
+            <ul class="space-y-3 text-gray-600">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i
+                ><span
+                  ><strong class="text-gray-700">Client Success:</strong> Your
+                  goals are our priority. We measure our success by yours.</span
+                >
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i
+                ><span
+                  ><strong class="text-gray-700">Innovation & Quality:</strong>
+                  Pushing boundaries with robust, high-quality code.</span
+                >
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i
+                ><span
+                  ><strong class="text-gray-700"
+                    >Integrity & Transparency:</strong
+                  >
+                  Open communication and ethical practices, always.</span
+                >
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i
+                ><span
+                  ><strong class="text-gray-700">Continuous Learning:</strong>
+                  Staying ahead of the curve in a fast-evolving tech
+                  landscape.</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section
+      id="testimonials"
+      class="py-20 lg:py-28 bg-gradient-to-br from-indigo-50 to-blue-50"
+    >
+      <div class="container mx-auto px-4 sm:px-6">
+        <h2
+          class="text-4xl lg:text-5xl font-bold text-center mb-16 lg:mb-20 text-gray-800 animate-on-scroll fade-in-on-scroll"
+        >
+          Client Success Stories
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+          <div
+            class="bg-white p-8 rounded-xl shadow-xl animate-on-scroll fade-in-on-scroll transform hover:-translate-y-1 transition-all duration-300"
+          >
+            <div class="text-yellow-400 mb-3 text-xl">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+            <p class="text-gray-600 italic mb-6 leading-relaxed">
+              "DBN GROUP PVT LTD delivered beyond our expectations. Our new
+              platform is fast, intuitive, and has significantly boosted user
+              engagement."
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://www.kevinashleyphotography.com/wp-content/uploads/2015/11/person.jpg"
+                alt="Client Avatar"
+                class="w-12 h-12 rounded-full mr-4 border-2 border-blue-200"
+              />
+              <div>
+                <p class="font-semibold text-gray-700">Alex Davis</p>
+                <p class="text-sm text-gray-500">CEO, Innovate Solutions</p>
+              </div>
+            </div>
+            <p class="mt-4 text-xs text-blue-600 font-medium">
+              Project Outcome: +45% User Engagement
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl shadow-xl animate-on-scroll fade-in-on-scroll transform hover:-translate-y-1 transition-all duration-300"
+            style="transition-delay: 0.1s"
+          >
+            <div class="text-yellow-400 mb-3 text-xl">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="text-gray-600 italic mb-6 leading-relaxed">
+              "The e-commerce site they built for us is fantastic. Sales are up,
+              and managing inventory is now a breeze. Highly recommend!"
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://th.bing.com/th/id/OIP.n70e2WpZqVF8D-d349mCaAHaHa?w=1200&h=1200&rs=1&pid=ImgDetMain"
+                alt="Client Avatar"
+                class="w-12 h-12 rounded-full mr-4 border-2 border-green-200"
+              />
+              <div>
+                <p class="font-semibold text-gray-700">Sarah Miller</p>
+                <p class="text-sm text-gray-500">Owner, The Boutique Hub</p>
+              </div>
+            </div>
+            <p class="mt-4 text-xs text-green-600 font-medium">
+              Project Outcome: +30% Online Revenue
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl shadow-xl animate-on-scroll fade-in-on-scroll transform hover:-translate-y-1 transition-all duration-300"
+            style="transition-delay: 0.2s"
+          >
+            <div class="text-yellow-400 mb-3 text-xl">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+            <p class="text-gray-600 italic mb-6 leading-relaxed">
+              "Their UI/UX expertise is evident. Our app is now so much more
+              user-friendly, and customer feedback has been overwhelmingly
+              positive."
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://th.bing.com/th/id/OIP.ho-ybER155YBjLvoEykl9AHaLH?rs=1&pid=ImgDetMain"
+                alt="Client Avatar"
+                class="w-12 h-12 rounded-full mr-4 border-2 border-purple-200"
+              />
+              <div>
+                <p class="font-semibold text-gray-700">Kevin Chen</p>
+                <p class="text-sm text-gray-500">Product Lead, TechFlow Apps</p>
+              </div>
+            </div>
+            <p class="mt-4 text-xs text-purple-600 font-medium">
+              Project Outcome: Enhanced User Satisfaction Scores
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 cursor-pointer">
+      <div class="text-left mb-12">
+        <p
+          class="text-sm text-center font-semibold text-brand-purple tracking-wider uppercase"
+        >
+          Contact
+        </p>
+        <h2 class="text-3xl text-center md:text-4xl font-bold text-gray-800">
+          Get In Touch With Us
+        </h2>
+      </div>
+      <div class="flex flex-col md:flex-row justify-around gap-4">
+        <div
+          class="bg-white p-6 md:w-1/3 rounded-lg shadow-md text-center mb-6"
+        >
+          <div class="text-brand-purple text-3xl mb-3">
+            <i class="fa fa-map-pin hover:text-blue-600"></i>
+          </div>
+          <h3
+            class="text-xl font-semibold text-gray-800 mb-1 hover:text-blue-600"
+          >
+            Address
+          </h3>
+          <p class="text-gray-600">Trade Tower 5th Floor, Kathmandu</p>
+        </div>
+        <div
+          class="bg-white p-6 md:w-1/3 rounded-lg shadow-md text-center mb-6"
+        >
+          <div class="text-brand-purple text-3xl mb-3">
+            <i class="fa fa-phone hover:text-blue-600"></i>
+          </div>
+          <h3
+            class="text-xl font-semibold text-gray-800 mb-1 hover:text-blue-600"
+          >
+            Call Us
+          </h3>
+          <p class="text-gray-600">9818439664</p>
+        </div>
+        <div
+          class="bg-white p-6 md:w-1/3 rounded-lg shadow-md text-center mb-6"
+        >
+          <div class="text-brand-purple text-3xl mb-3">
+            <i class="fa fa-envelope hover:text-blue-600"></i>
+          </div>
+          <h3
+            class="text-xl font-semibold text-gray-800 mb-1 hover:text-blue-600"
+          >
+            Email Us
+          </h3>
+          <p class="text-gray-600">info@softsaro.com</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      style="
+        background-image: url('https://th.bing.com/th/id/OIP.wJ-h5C0lYMlspaDezOvQeAHaEK?rs=1&pid=ImgDetMain');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      "
+      class="py-20 lg:py-28 text-white"
+    >
+      <div class="container mx-auto px-4 sm:px-6">
+        <h2
+          class="text-4xl lg:text-5xl font-bold text-center mb-12 lg:mb-16 animate-on-scroll fade-in-on-scroll"
+        >
+          Let's Build Something Amazing
+        </h2>
+        <div
+          class="max-w-2xl mx-auto bg-white/95 backdrop-blur-sm text-gray-800 p-8 md:p-10 rounded-xl shadow-2xl animate-on-scroll fade-in-on-scroll"
+          style="transition-delay: 0.1s"
+        >
+          <form id="contactForm">
+            <div class="grid sm:grid-cols-2 gap-x-6 gap-y-5 mb-5">
+              <div>
+                <label
+                  for="name"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Full Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-shadow"
+                />
+              </div>
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-shadow"
+                />
+              </div>
+            </div>
+            <div class="mb-5">
+              <label
+                for="subject"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Subject</label
+              >
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                required
+                class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-shadow"
+              />
+            </div>
+            <div class="mb-6">
+              <label
+                for="message"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Your Message</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-shadow"
+              ></textarea>
+            </div>
+            <div class="text-center">
+              <button
+                type="submit"
+                class="bg-blue-600 text-white font-semibold px-10 py-3.5 rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+              >
+                Send Your Inquiry
+              </button>
+            </div>
+            <div id="form-message" class="mt-5 text-center text-sm"></div>
+          </form>
+        </div>
+
+        <div
+          class="mt-16 text-center animate-on-scroll fade-in-on-scroll"
+          style="transition-delay: 0.2s"
+        >
+          <p class="text-lg mb-3 text-blue-100">Or connect with us directly:</p>
+          <p class="mb-2 text-blue-50">
+            <i class="fas fa-envelope mr-2 opacity-80"></i>
+            <a
+              href="mailto:info@dbngroup.com"
+              class="hover:text-white transition-colors"
+              >info@dbngroup.com</a
+            >
+          </p>
+          <p class="mb-6 text-blue-50">
+            <i class="fas fa-map-marker-alt mr-2 opacity-80"></i> 123 Digital
+            Avenue, Tech City, USA
+          </p>
+          <div class="flex justify-center space-x-6">
+            <a
+              href="#"
+              target="_blank"
+              aria-label="LinkedIn Profile"
+              class="text-3xl text-blue-200 hover:text-white transition-transform transform hover:scale-110"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a
+              href="#"
+              target="_blank"
+              aria-label="GitHub Profile"
+              class="text-3xl text-blue-200 hover:text-white transition-transform transform hover:scale-110"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="#"
+              target="_blank"
+              aria-label="Twitter Profile"
+              class="text-3xl text-blue-200 hover:text-white transition-transform transform hover:scale-110"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              href="#"
+              target="_blank"
+              aria-label="Dribbble Profile"
+              class="text-3xl text-blue-200 hover:text-white transition-transform transform hover:scale-110"
+              ><i class="fab fa-dribbble"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-10 text-center">
+      <p>
+        © <span id="currentYear"></span> DBN GROUP PVT LTD. All Rights Reserved.
+      </p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              // Calculate offset for fixed navbar if necessary
+              // const navbarHeight = document.querySelector('nav').offsetHeight;
+              // const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+              // const offsetPosition = elementPosition - navbarHeight;
+              // window.scrollTo({ top: offsetPosition, behavior: 'smooth'});
+              targetElement.scrollIntoView({ behavior: "smooth" });
+
+              // Close mobile menu if open
+              if (mobileMenu.classList.contains("open")) {
+                mobileMenu.classList.remove("open");
+                mobileMenu.classList.add("max-h-0");
+                mobileMenuButton.innerHTML =
+                  '<i class="fas fa-bars fa-lg"></i>';
+              }
+            }
+          });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        mobileMenuButton.addEventListener("click", () => {
+          mobileMenu.classList.toggle("open");
+          if (mobileMenu.classList.contains("open")) {
+            mobileMenu.classList.remove("max-h-0"); // Ensure max-h is not 0 when opening
+            mobileMenuButton.innerHTML = '<i class="fas fa-times fa-lg"></i>';
+          } else {
+            mobileMenu.classList.add("max-h-0"); // Apply max-h-0 when closing for transition
+            mobileMenuButton.innerHTML = '<i class="fas fa-bars fa-lg"></i>';
+          }
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll(".mobile-nav-link").forEach((link) => {
+          link.addEventListener("click", () => {
+            if (mobileMenu.classList.contains("open")) {
+              mobileMenu.classList.remove("open");
+              mobileMenu.classList.add("max-h-0");
+              mobileMenuButton.innerHTML = '<i class="fas fa-bars fa-lg"></i>';
+            }
+          });
+        });
+
+        // Intersection Observer for scroll animations
+        const animatedElements =
+          document.querySelectorAll(".animate-on-scroll");
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                // Optional: stop observing once animated to save resources
+                // observer.unobserve(entry.target);
+              } else {
+                // Optional: remove 'visible' class if you want animations to replay on scroll up/down
+                // entry.target.classList.remove('visible');
+              }
+            });
+          },
+          { threshold: 0.1 }
+        ); // Adjust threshold (0.0 to 1.0) as needed
+
+        animatedElements.forEach((el) => {
+          observer.observe(el);
+        });
+
+        // Contact Form Submission (placeholder)
+        const contactForm = document.getElementById("contactForm");
+        const formMessage = document.getElementById("form-message");
+        if (contactForm) {
+          contactForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            if (name && email && message) {
+              formMessage.textContent =
+                "Thank you! Your message has been sent. We'll be in touch shortly.";
+              formMessage.className = "mt-5 text-center text-sm text-green-600";
+              contactForm.reset();
+              // For actual submission, use Fetch API to send data to a backend/service
+              // fetch('/.netlify/functions/submit-form', { // Example for Netlify Functions
+              //    method: 'POST',
+              //    body: new FormData(contactForm)
+              // })
+              // .then(response => response.json())
+              // .then(data => console.log(data))
+              // .catch(error => console.error('Error:', error));
+            } else {
+              formMessage.textContent = "Please fill out all required fields.";
+              formMessage.className = "mt-5 text-center text-sm text-red-600";
+            }
+            setTimeout(() => {
+              formMessage.textContent = "";
+            }, 6000);
+          });
+        }
+
+        // Update current year in footer
+        document.getElementById("currentYear").textContent =
+          new Date().getFullYear();
+
+        // Active navigation link highlighting on scroll
+        const sections = document.querySelectorAll("section[id]");
+        const navLinks = document.querySelectorAll("nav a.nav-link");
+        const navHeight = document.querySelector("nav").offsetHeight;
+
+        window.addEventListener("scroll", () => {
+          let currentSectionId = "hero"; // Default to hero
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop - navHeight - 50; // Adjusted offset
+            if (pageYOffset >= sectionTop) {
+              currentSectionId = section.getAttribute("id");
+            }
+          });
+
+          navLinks.forEach((link) => {
+            link.classList.remove("nav-link-active");
+            if (link.getAttribute("href") === `#${currentSectionId}`) {
+              link.classList.add("nav-link-active");
+            }
+          });
+        });
+        // Initial call to set active link on load
+        window.dispatchEvent(new Event("scroll"));
+      });
+    </script>
+  </body>
+</html>
